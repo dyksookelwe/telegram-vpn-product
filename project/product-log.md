@@ -20,3 +20,23 @@ Stable connectivity and successful client connections.
 
 Conclusion:
 Simplicity and reliability are more important than optimization.
+
+## Checkpoint #2 — User access & subscription design
+
+Date: 23.12.2025
+
+Problem:
+Need a simple Telegram-first UX to sell access, manage subscriptions, and reduce support load.
+
+Hypothesis:
+A wallet-based flow + one main “Connect” path + manual payment confirmation ("I paid") will be the simplest MVP without requiring webhooks/domain.
+
+What was done:
+Defined entities, menu, user flows, payment flow, and x-ui integration model.
+
+Result:
+Documentation baseline ready for implementation.
+
+Conclusion:
+Documentation-first reduced ambiguity and prevents rework.
+
