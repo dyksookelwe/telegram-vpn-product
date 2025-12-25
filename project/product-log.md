@@ -40,3 +40,33 @@ Documentation baseline ready for implementation.
 Conclusion:
 Documentation-first reduced ambiguity and prevents rework.
 
+## 3x-ui integration and VLESS link generation
+
+Date: 25.12.2025
+
+Problem:
+Needed to generate and deliver a working VLESS Reality link
+for each user directly from the Telegram bot.
+
+This turned out to be significantly more complex than expected
+due to panel API behavior and configuration constraints.
+
+Hypothesis:
+Generating a unique VPN client per Telegram user
+and building the VLESS link dynamically
+would be the most reliable approach.
+
+What was done:
+- Integrated bot with 3x-ui panel API
+- Tested multiple approaches to link generation
+- Implemented per-user client creation using Telegram ID
+- Added optional QR code generation for user convenience
+
+Result:
+Users can press "Connect" and receive a working VLESS link.
+QR code is available as an optional alternative.
+
+Conclusion:
+Panel integrations are often the hardest part of the system.
+Simplifying the client model reduced errors and made the system stable.
+

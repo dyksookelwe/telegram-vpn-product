@@ -80,3 +80,49 @@ Reduces confusion and support requests.
 Risks:
 Advanced users may want more control.
 
+## Decision: One VPN client per Telegram user
+
+Date: 25.12.2025
+
+Context:
+Generating VLESS Reality links through 3x-ui API
+proved unreliable with shared or reused configurations.
+
+Options:
+- Reuse a shared client or static config
+- Generate a new client per user
+
+Decision:
+Create a unique VPN client per Telegram user
+and bind it to the user's Telegram ID.
+
+Why:
+Improves reliability, simplifies troubleshooting,
+and avoids cross-user conflicts.
+
+Risks:
+Higher number of clients in the panel.
+
+## Decision: QR code as optional connection method
+
+Date: 25.12.2025
+
+Context:
+Some users struggle with copying and importing VLESS links,
+especially on mobile devices.
+
+Options:
+- Text link only
+- QR code only
+- Text link + optional QR code
+
+Decision:
+Provide QR code as an optional connection method.
+
+Why:
+Improves usability without forcing a new flow.
+Keeps primary path simple.
+
+Risks:
+May be unused or unnecessary (to be validated).
+

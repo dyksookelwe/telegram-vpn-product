@@ -36,6 +36,21 @@ and VPN configuration delivery are designed before implementation.
 The goal is to provide a simple, Telegram-first experience
 that minimizes user confusion and operational complexity.
 
+### VPN link generation and delivery
+
+Each user is assigned a unique VPN client
+created via the 3x-ui panel API.
+
+The VLESS Reality connection link is generated dynamically
+based on the user's client identifier and inbound configuration.
+
+The bot delivers:
+- a VLESS connection URI
+- an optional QR code for mobile clients
+
+Links are generated on demand and not permanently stored.
+
+
 ---
 
 ### Roles
@@ -149,3 +164,5 @@ and migrate to physical servers without breaking architecture.
 - Fewer moving parts
 - Predictable user flows
 - Easy rollback and recovery
+
+
